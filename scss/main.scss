@@ -1,0 +1,299 @@
+$black: #363738;
+$p-color: #6b6b6c;
+$transition: all 0.3s ease-in-out;
+
+@import url(./_fonts.scss);
+@import url(./_normalize.scss);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.truck-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 67px;
+  padding-bottom: 120px;
+
+  .truck-info {
+    background-image: url(../img/truck.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-right: 200px;
+
+    .truck-title {
+      max-width: 769px;
+      display: flex;
+      align-items: center;
+      background-color: #0b7572;
+      padding: 178px 0 166px 90px;
+      clip-path: polygon(0 0, 60% 0, 100% 100%, 0 100%);
+
+      h2 {
+        max-width: 362px;
+        font-family: "Exo 2", sans-serif;
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 60px;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.section-info {
+  padding-bottom: 56px;
+  h1 {
+    font-family: "Exo 2", sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 60px;
+    color: $black;
+    margin-bottom: 32px;
+  }
+
+  p {
+    max-width: 667px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #6b6b6c;
+  }
+}
+
+.cards__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 120px;
+
+  .card1 {
+    max-width: 393px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 15px 0px #0000001f;
+
+    .card-title {
+      padding: 24px 32px;
+
+      h4 {
+        font-family: "Exo 2", sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 27px;
+        color: $black;
+        margin-bottom: 16px;
+      }
+
+      p {
+        max-width: 291px;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: $p-color;
+        margin-bottom: 32px;
+      }
+
+      a {
+        font-family: "Exo 2", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 21.6px;
+        text-decoration: none;
+        color: $black;
+        border-bottom: 3px solid #ffce50;
+        padding-bottom: 5px;
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover{
+          color: black
+        }
+      }
+    }
+  }
+
+  .card2 {
+    @extend .card1;
+  }
+
+  .card3 {
+    @extend .card1;
+  }
+}
+
+h4 {
+  font-family: "Exo 2", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 60px;
+  color: $black;
+}
+
+.card__container {
+  padding: 48px 49px;
+  .card1 {
+    max-width: 1183px;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 15px 0px #0000001f;
+    border-radius: 10px;
+    display: flex;
+    padding: 32px 96px;
+    gap: 56px;
+    margin-bottom: 24px;
+
+    h5 {
+      font-family: "Exo 2", sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 25px;
+      color: $black;
+      margin-bottom: 10px;
+    }
+    .line {
+      width: 86px;
+      border: 2px solid #ffce50;
+      margin-bottom: 24px;
+    }
+
+    p {
+      max-width: 568px;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: $p-color;
+    }
+  }
+  .card2 {
+    @extend .card1;
+  }
+
+  .card3 {
+    @extend .card1;
+    margin-bottom: 120px;
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+  padding: 90px 46px;
+
+  .card1 {
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+
+    .card-img {
+      margin-bottom: 32px;
+    }
+
+    h5 {
+      font-family: "Exo 2", sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 27px;
+      text-decoration: none;
+      color: $black;
+      cursor: pointer;
+      transition: $transition;
+
+      &:hover {
+        color: black;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      color: $p-color;
+      margin-top: 14px;
+    }
+  }
+
+  .card2 {
+    @extend .card1;
+    .card-img {
+      margin-top: 5px;
+      margin-bottom: 56px;
+    }
+    padding-left: 63px;
+    border-left: 2px solid #d7d7dd;
+  }
+
+  .card3 {
+    @extend .card1;
+    padding-left: 63px;
+    border-left: 2px solid #d7d7dd;
+  }
+
+  .card4 {
+    @extend .card1;
+    padding-left: 63px;
+    border-left: 2px solid #d7d7dd;
+  }
+}
+
+.cards2 {
+  @extend .cards;
+  padding: 0 53px;
+  margin-bottom: 130px;
+
+  .card5 {
+    @extend .card1;
+    padding-top: 26px;
+    .card-img {
+      margin-bottom: 57px;
+    }
+  }
+  .card6 {
+    @extend .card1;
+    padding-top: 9px;
+    .card-img {
+      margin-bottom: 36px;
+    }
+    padding-left: 63px;
+    border-left: 2px solid #d7d7dd;
+  }
+
+  .card7 {
+    @extend .card1;
+    padding-top: 4px;
+    .card-img {
+      margin-bottom: 32px;
+    }
+    padding-left: 70px;
+    border-left: 2px solid #d7d7dd;
+  }
+
+  .card8 {
+    @extend .card1;
+    padding-top: 22px;
+    .card-img {
+      margin-bottom: 59px;
+    }
+    padding-left: 55px;
+    border-left: 2px solid #d7d7dd;
+  }
+}
