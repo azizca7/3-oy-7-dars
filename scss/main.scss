@@ -20,7 +20,6 @@ body {
   max-width: 1240px;
   width: 100%;
   margin: 0 auto;
-  flex-wrap: wrap;
 }
 
 .truck-container {
@@ -33,7 +32,6 @@ body {
     background-image: url(../img/truck.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding-right: 200px;
 
     .truck-title {
       max-width: 769px;
@@ -123,8 +121,8 @@ body {
         cursor: pointer;
         transition: $transition;
 
-        &:hover{
-          color: black
+        &:hover {
+          color: black;
         }
       }
     }
@@ -159,28 +157,29 @@ h4 {
     padding: 32px 96px;
     gap: 56px;
     margin-bottom: 24px;
-
-    h5 {
-      font-family: "Exo 2", sans-serif;
-      font-size: 20px;
-      font-weight: 600;
-      line-height: 25px;
-      color: $black;
-      margin-bottom: 10px;
-    }
-    .line {
-      width: 86px;
-      border: 2px solid #ffce50;
-      margin-bottom: 24px;
-    }
-
-    p {
+    .card-title {
       max-width: 568px;
-      width: 100%;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 24px;
-      color: $p-color;
+      h5 {
+        font-family: "Exo 2", sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 25px;
+        color: $black;
+        margin-bottom: 10px;
+      }
+
+      p {
+        max-width: 568px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: $p-color;
+      }
+      .line {
+        width: 86px;
+        border: 2px solid #ffce50;
+        margin-bottom: 24px;
+      }
     }
   }
   .card2 {
@@ -295,5 +294,125 @@ h4 {
     }
     padding-left: 55px;
     border-left: 2px solid #d7d7dd;
+  }
+}
+
+// responsive
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media screen and (max-width: 1239px) {
+  .container {
+    max-width: 92%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .truck-container .truck-info {
+    background-image: url(../img/truck-tablet.png);
+  }
+
+  .truck-container .truck-info .truck-title {
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .cards__container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 59px 0px 19px;
+
+    .card1 {
+      width: 120%;
+      max-width: none;
+    }
+
+    .card1 .image img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card3 {
+      display: none;
+    }
+  }
+
+  .card__container .card1 {
+    max-width: 693px;
+    height: 245px;
+    padding: 30px;
+    .image img {
+      display: none;
+    }
+
+    .card-title {
+      max-width: 531px;
+      width: 100%;
+    }
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .truck-container {
+    padding: 0px;
+    .truck-info {
+      display: none;
+    }
+  }
+  .cards__container {
+    .card2 {
+      display: none;
+    }
+  }
+
+  .cards2 .card5,
+  .card6,
+  .card7,
+  .card8 {
+    display: none;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+  .section-info {
+    width: 100%;
+  }
+
+  .cards__container {
+    padding: 0px;
+    .card1 {
+      max-width: 345px;
+    }
+  }
+
+  .card__container {
+    max-width: 338px;
+    padding: 0px;
+
+    .card1 .card-title {
+      max-width: 284px;
+
+      p {
+        max-width: 266px;
+        height: 85px;
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
   }
 }
